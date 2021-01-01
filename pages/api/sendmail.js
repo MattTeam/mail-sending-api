@@ -1,8 +1,8 @@
-import allowCors from "../../../allow-cors";
+import allowCors from "../../allow-cors";
 const nodemailer = require("nodemailer");
 
 const handler = async (req, res) => {
-  if (checkToken(req, res)) {
+ 
     const { method } = req;
 
     switch (method) {
@@ -46,7 +46,7 @@ const handler = async (req, res) => {
         res.status(404).send("invalid endpoint");
         break;
     }
-  }
+
 };
 
 module.exports = allowCors(handler);
