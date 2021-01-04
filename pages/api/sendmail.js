@@ -1,5 +1,6 @@
 import allowCors from "../../allow-cors";
 const nodemailer = require("nodemailer");
+require('dotenv').config();
 
 const handler = async (req, res) => {
  
@@ -13,8 +14,8 @@ const handler = async (req, res) => {
           const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
-              user: "shrabanis8@gmail.com",
-              pass: "oagurmmdihqobqsq", // naturally, replace both with your real credentials or an application-specific password
+              user: process.env.USERNAME,
+              pass: process.env.PASSWORD, // naturally, replace both with your real credentials or an application-specific password
             },
           });
           var mailContent =
