@@ -1,3 +1,5 @@
+// The endpoint : https://mail-sending-api.vercel.app/api/sendmail
+
 import allowCors from "../../allow-cors";
 const nodemailer = require("nodemailer");
 // require('dotenv').config();
