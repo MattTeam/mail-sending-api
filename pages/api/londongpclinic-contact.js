@@ -1,11 +1,11 @@
 import allowCors from "../../allow-cors";
+import middleware from"../../middleware";
 const nodemailer = require("nodemailer");
 // require('dotenv').config();
 
 const handler = async (req, res) => {
  
-    const { method } = req;
-
+    const { method } = req; 
     switch (method) {
       case "POST":
         try {
@@ -18,8 +18,9 @@ const handler = async (req, res) => {
               pass: process.env.PASSWORD, // naturally, replace both with your real credentials or an application-specific password
             },
           });
+          //data.to
           var mailContent =
-            '<!DOCTYPE HTML><head><meta http-equiv="content-type" content="text/html"></head><body><div id="outer" style="width: 80%;margin: 0 auto;margin-top: 10px;"><div id="inner" style="width: 78%;margin: 0 auto;background-color: #fff;font-family: Open Sans,Arial,sans-serif;font-size: 13px;font-weight: normal;line-height: 1.4em;color: #444;margin-top: 10px;"><p>Name : ' +
+            '<!DOCTYPE HTML><head><meta http-equiv="content-type" content="text/html"></head><body><div id="outer" style="width: 80%;margin: 0 auto;margin-top: 10px;"><div id="inner" style="width: 78%;margin: 0 auto;background-color: #fff;font-family: Open Sans,Arial,sans-serif;font-size: 13px;font-weight: normal;line-height: 1.4em;color: #444;margin-top: 10px;"><h3> New contact request using next.js </h3><p>Name : ' +
             data.name +
             "</p><p>Email: " +
             data.email +
@@ -32,7 +33,7 @@ const handler = async (req, res) => {
             "</p></div></div></body>";
           const mailOptions = {
             from: "info@londongpclinic.co.uk",
-            to: data.to,
+            to: 'swetanshu84@gmail.com, rickydubey1986@gmail.com, bablu.developer16@gmail.com',
             subject:
               "londongpclinic.co.uk | New Contact Request from " + data.name,
             html: mailContent,
@@ -50,4 +51,4 @@ const handler = async (req, res) => {
 
 };
 
-module.exports = allowCors(handler);
+module.exports = middleware(allowCors(handler));
