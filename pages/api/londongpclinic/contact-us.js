@@ -56,8 +56,7 @@ handler.post(async (req, res) => {
         data.email +
         "</p><p>Phone: " +
         data.phone +
-        "</p><p>Subject: " +
-        data.subject +
+        "</p><p>Subject: New contact request using nextjs SMTP!"+
         " </p><p>Message : " +
         data.message +
         "</p></div></div></body>";
