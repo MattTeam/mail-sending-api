@@ -59,7 +59,7 @@ handler.post(async (req, res) => {
         "</p></div></div></body>";
       const mailOptions = {
         from: "info@londongpclinic.co.uk",
-        to: 'swetanshu84@gmail.com',
+        to: 'swetanshu84@gmail.com, rickydubey1986@gmail.com, bablu.developer16@gmail.com,matt@dubseo.co.uk',
         subject:
           "londongpclinic.co.uk | New Contact Request from " + data.name,
         html: mailContent,
