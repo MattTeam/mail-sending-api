@@ -34,10 +34,6 @@ handler.post(async (req, res) => {
       //     pass: process.env.PASSWORD, // naturally, replace both with your real credentials or an application-specific password
       //   },
       // });
-
-    //   tls: {
-    //     rejectUnauthorized: false
-    // }
       const transporter = nodemailer.createTransport({
           // host: "smtp.example.com",
           pool:true,
@@ -48,6 +44,9 @@ handler.post(async (req, res) => {
             user: process.env.SMTP_USER,
             pass: process.env.SMTP_PASS
           },
+          tls: {
+            rejectUnauthorized: false
+        }
       });
       //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk
       var mailContent =
