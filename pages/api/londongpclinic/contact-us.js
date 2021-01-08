@@ -14,10 +14,10 @@ const validateBody = initMiddleware(
       check('name').isString().withMessage('Name should be only string !').isLength({min:4, max: 40}).withMessage('Name length should 4 to 40 charecters !'),
       check('email').exists().withMessage("Email is required").isEmail().withMessage("Invalid email address !"), 
       check('phone').matches(/^(\+\d{1,3}[- ]?)?\d{10}$/, 'g').withMessage("Phone number is invalid !"),
-      check('message').matches(/^([0-9A-z\ \_]+)$/, 'g').withMessage('Message should not use uniq characters !')
+      check('message').exists().withMessage('Message is required !')
   ], validationResult)
 )
-
+// check('message').matches(/^([0-9A-z\ \_]+)$/, 'g').withMessage('Message should not use uniq characters !')
 handler.post(async (req, res) => { 
     try {
       const data = req.body; // get the json object sent by the client
