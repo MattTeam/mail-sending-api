@@ -5,7 +5,7 @@ import handler from"../../../utils/handler";
 import initMiddleware from '../../../utils/init-middleware';
 import validateMiddleware from '../../../utils/validate-middleware';
 import { check, validationResult } from 'express-validator'
-
+import contactTmep from './lib/contact-temp';
 const nodemailer = require("nodemailer");
 // require('dotenv').config();
 // check('message').isIn(['@','#','%','&','*','^']).withMessage('Invalid character in messages !')
@@ -49,20 +49,10 @@ handler.post(async (req, res) => {
         }
       });
       //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk
-      var mailContent =
-        '<!DOCTYPE HTML><head><meta http-equiv="content-type" content="text/html"></head><body><div id="outer" style="width: 80%;margin: 0 auto;margin-top: 10px;"><div id="inner" style="width: 78%;margin: 0 auto;background-color: #fff;font-family: Open Sans,Arial,sans-serif;font-size: 13px;font-weight: normal;line-height: 1.4em;color: #444;margin-top: 10px;"><h3> New contact request using next.js </h3><p>Name : ' +
-        data.name +
-        "</p><p>Email: " +
-        data.email +
-        "</p><p>Phone: " +
-        data.phone +
-        "</p><p>Subject: New contact request using nextjs SMTP!"+
-        " </p><p>Message : " +
-        data.message +
-        "</p></div></div></body>";
+      var mailContent =  await contactTmep(data) ;
       const mailOptions = {
         from: "info@londongpclinic.co.uk",
-        to: 'swetanshu84@gmail.com, rickydubey1986@gmail.com, bablu.developer16@gmail.com',
+        to: 'swetanshu84@gmail.com',
         subject:
           "londongpclinic.co.uk | New Contact Request from " + data.name,
         html: mailContent,
