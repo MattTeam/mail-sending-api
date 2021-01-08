@@ -9,14 +9,25 @@ import contactTmep from './lib/contact-temp';
 const nodemailer = require("nodemailer");
 // require('dotenv').config();
 // check('message').isIn(['@','#','%','&','*','^']).withMessage('Invalid character in messages !')
+// const validateBody = initMiddleware(
+//   validateMiddleware([
+//       check('name').isString().withMessage('Name should be only string !').isLength({min:4, max: 40}).withMessage('Name length should 4 to 40 charecters !'),
+//       check('email').exists().withMessage("Email is required").isEmail().withMessage("Invalid email address !"), 
+//       check('phone').matches(/^(\+\d{1,3}[- ]?)?\d{10}$/, 'g').withMessage("Phone number is invalid !"),
+//       check('message').exists().withMessage('Message is required !')
+//   ], validationResult)
+// )
+
 const validateBody = initMiddleware(
   validateMiddleware([
-      check('name').isString().withMessage('Name should be only string !').isLength({min:4, max: 40}).withMessage('Name length should 4 to 40 charecters !'),
+      check('name').isString().withMessage('Name should be only string !').isLength({min:2, max: 40}).withMessage('Name length should 4 to 40 charecters !'),
       check('email').exists().withMessage("Email is required").isEmail().withMessage("Invalid email address !"), 
-      check('phone').matches(/^(\+\d{1,3}[- ]?)?\d{10}$/, 'g').withMessage("Phone number is invalid !"),
+      check('phone').isLength({min:9, max: 12}).withMessage("Phone number is invalid !"),
       check('message').exists().withMessage('Message is required !')
   ], validationResult)
 )
+
+
 // check('message').matches(/^([0-9A-z\ \_]+)$/, 'g').withMessage('Message should not use uniq characters !')
 handler.post(async (req, res) => { 
     try {
