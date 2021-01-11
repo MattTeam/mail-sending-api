@@ -1,3 +1,5 @@
+import allowCors from "../../../allow-cors";
+
 import excuteQuery from './lib/db';
 import handler from"../../../utils/handler";
  
@@ -16,4 +18,4 @@ handler.get(async (req, res) => {
     }
 });
 
-module.exports = handler;
+module.exports = allowCors(handler);
