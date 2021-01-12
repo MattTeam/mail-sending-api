@@ -200,7 +200,7 @@ const contactTmep = async (data)=>{
 
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Phone:</strong> '+ data.phone +' </p>'+
 
-                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Subject:</strong> New contact request using nextjs SMTP with Template!</p>'+
+                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Subject:</strong> New contact request received!</p>'+
 
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Message :</strong> '+ data.message +' </p>'+
 
