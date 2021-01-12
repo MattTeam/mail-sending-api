@@ -9,13 +9,12 @@ handler.get(async (req, res) => {
     try {
         // const result = await excuteQuery({query: 'SELECT * FROM model_has_roles ',values: ''});
         // return result[0]; 
-        // console.log("the result : ", result);
+        console.log("the result : in logs");
 
         res.status(200).json({ status: "OK", result: "test result" });
     } catch (error) {
       console.log("the error : ", error);
-
-        res.status(400).json({ status: "OK", result: error });
+      res.status(400).json({ status: "OK", result: error });
     }
 });
 
