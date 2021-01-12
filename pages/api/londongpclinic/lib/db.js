@@ -11,12 +11,10 @@ const db = mysql({
 
 export default async function excuteQuery({ query, values }) {
     try {
-      const results = await db.query(query, values);
-      console.log("the results : ", results);
+      const results = await db.query(query, values); 
       await db.end();
       return results;
-    } catch (error) {
-        console.log("the error : ", error);
+    } catch (error) { 
       return  error ;
     }
   }
