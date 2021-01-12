@@ -1,6 +1,6 @@
 import allowCors from "../../../allow-cors";
 
-import {excuteQuery} from './lib/db';
+import excuteQuery from './lib/db';
 import handler from"../../../utils/handler";
  
 
