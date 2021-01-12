@@ -14,7 +14,7 @@ handler.get(async (req, res) => {
         res.status(200).json({ status: "OK 1", result: result });
     } catch (error) {
       console.log("the error : ", error);
-      res.status(400).json({ status: "OK", result: "catch error" });
+      res.status(400).json({ status: "OK", result: error });
     }
 });
 
