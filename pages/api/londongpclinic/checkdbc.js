@@ -7,7 +7,7 @@ import handler from"../../../utils/handler";
 handler.get(async (req, res) => { 
     console.log("The next req : ",req);
     try {
-        const result = await excuteQuery({query: 'SELECT * FROM model_has_roles ',values: ''});
+        const result = await excuteQuery({query: 'SELECT * FROM user_addresses ',values: ''});
         // return result[0]; 
         console.log("the result : in logs" , result);
 
