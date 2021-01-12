@@ -11,10 +11,10 @@ handler.get(async (req, res) => {
         // return result[0]; 
         console.log("the result : in logs" , result);
 
-        res.status(200).json({ status: "OK", result: result });
+        res.status(200).json({ status: "OK 1", result: result });
     } catch (error) {
       console.log("the error : ", error);
-      res.status(400).json({ status: "OK", result: error });
+      res.status(400).json({ status: "OK", result: "catch error" });
     }
 });
 
