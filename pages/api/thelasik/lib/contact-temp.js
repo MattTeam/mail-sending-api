@@ -1,5 +1,14 @@
 const contactTmep = async (data)=>{
-    var currDate = new Date();
+//     var currDate = new Date();
+//     var dd = String(today.getDate()).padStart(2, '0');
+//     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+//     var yyyy = today.getFullYear();
+
+//     var today = mm + '/' + dd + '/' + yyyy;
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    var today  = new Date();
+    var currDate  = today.toLocaleDateString("en-US", options) ;
+
     var mailContent =
     '<!doctype html>' +
     '<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">'+
@@ -210,7 +219,7 @@ const contactTmep = async (data)=>{
                                             
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: center;margin-top: 0;">Administrator</p>'+
 
-                                            '<p style="color: #32409a;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 18px;font-weight: normal;line-height: 180%;text-align: center;"><strong>London GP Clinic</strong></p>'+
+                                            '<p style="color: #32409a;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 18px;font-weight: normal;line-height: 180%;text-align: center;"><strong> thelasik.co.uk </strong></p>'+
                                         '</td> </tr> </tbody> </table>'+
 
                                     '</td> </tr> </tbody></table>'+

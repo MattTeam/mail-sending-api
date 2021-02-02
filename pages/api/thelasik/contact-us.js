@@ -1,4 +1,4 @@
-// The endpoint : https://mail-sending-api.vercel.app/api/londongpclinic/contact-us
+// The endpoint : https://mail-sending-api.vercel.app/api/thelasik/contact-us
 import allowCors from "../../../allow-cors";
 import middleware from"../../../utils/middleware";
 import handler from"../../../utils/handler";
