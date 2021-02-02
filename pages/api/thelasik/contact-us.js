@@ -59,12 +59,12 @@ handler.post(async (req, res) => {
             rejectUnauthorized: false
         }
       });
-      // Just changed
-      //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk swetanshu84@gmail.com, rickydubey1986@gmail.com, bablu.developer16@gmail.com
+      // Just changed Client Emails : 
+      //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk 
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
         from: "info@thelasik.co.uk",
-        to: 'swetanshu84@gmail.com, rickydubey1986@gmail.com, bablu.developer16@gmail.com',
+        to: 'info@thelasik.co.uk, matt@dubseo.co.uk',
         subject:
           "thelasik.co.uk | New Contact Request from " + data.name,
         html: mailContent,
