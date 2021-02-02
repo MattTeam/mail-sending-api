@@ -219,7 +219,7 @@ const contactTmep = async (data)=>{
                                             
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: center;margin-top: 0;">Administrator</p>'+
 
-                                            '<p style="color: #32409a;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 18px;font-weight: normal;line-height: 180%;text-align: center;"><strong> thelasik.co.uk </strong></p>'+
+                                            '<p style="color: #32409a;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 18px;font-weight: normal;line-height: 180%;text-align: center;"><strong> The Lasik </strong></p>'+
                                         '</td> </tr> </tbody> </table>'+
 
                                     '</td> </tr> </tbody></table>'+
