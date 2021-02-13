@@ -54,9 +54,9 @@ const contactTmep = async (data)=>{
 		'h3{ color:#444444; font-family:Helvetica; font-size:22px; font-style:normal; font-weight:bold; line-height:150%; letter-spacing:normal;text-align:left;}'+
 	 
 		'h4{color:#949494; font-family:Georgia; font-size:20px; font-style:italic; font-weight:normal; line-height:125%;letter-spacing:normal;text-align:left;}'+
-	 
-		'#templateHeader{background-color:#f7f7f7;background-image:none;background-repeat:no-repeat;background-position:center;background-size:cover;border-top:0;border-bottom:0;padding-top:45px;padding-bottom:45px;}'+
-	 
+                '#templateHeader{ background-color:#182126; background-image:none; background-repeat:no-repeat; background-position:center;background-size:cover; border-top:0; border-bottom:0; padding-top:9px; padding-bottom:0;}'+
+                '#templateHeader .mcnTextContent,#templateHeader .mcnTextContent p{color:#202020; font-family:Helvetica; font-size:16px; line-height:150%; text-align:left; }'+
+                '#templateHeader .mcnTextContent a,#templateHeader .mcnTextContent p a{color:#007C89; font-weight:normal; text-decoration:underline; }'+
 		'.headerContainer{ background-color:#transparent; background-image:none; background-repeat:no-repeat; background-position:center;background-size:cover;border-top:0;border-bottom:0;padding-top:0;padding-bottom:0;}'+
 	 
 		'.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#757575;font-family:Helvetica;font-size:16px;line-height:150%;text-align:left;}'+
