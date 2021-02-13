@@ -66,7 +66,7 @@ handler.post(async (req, res) => {
         from: "info@loft.london",
         to: 'swetanshu84@gmail.com, rickydubey1986@gmail.com, bablu.developer16@gmail.com',
         subject:
-          "loft.london | New Contact Request from " + data.name,
+          "loft.london | New "+data.from+" from " + data.name,
         html: mailContent,
       };
       const result = await transporter.sendMail(mailOptions);
