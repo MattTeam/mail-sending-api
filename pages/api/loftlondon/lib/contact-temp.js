@@ -80,8 +80,7 @@ const contactTmep = async (data)=>{
 		'.footerContainer .mcnTextContent a,.footerContainer .mcnTextContent p a{ color:#FFFFFF; font-weight:normal; text-decoration:underline; }'+
 	'@media only screen and (min-width:768px){'+
 		'.templateContainer{'+
-			'width:600px !important;'+
-                        'border:3px inset #182126;'+
+			'width:600px !important;'+ 
 		'}'+
 
     '}'+	
@@ -195,10 +194,10 @@ const contactTmep = async (data)=>{
                         
                         '<td style="padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:18px;">'+
                         
-                            '<table border="0" cellspacing="0" class="mcnTextContentContainer" width="100%" style="min-width: 100% !important;background-color: #fff;border: 3px outset #61c4ee;">'+
+                            '<table border="0" cellspacing="0" class="mcnTextContentContainer" width="100%" style="min-width: 100% !important;background-color: #fff;">'+
                                 '<tbody>'+
                                 '<tr><td>'+
-                                 '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">'+
+                                 '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" style="border:3px inset #182126 !important;>'+
                             
                             '<tr><td valign="top" id="templateHeader"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">'+
 				'<tbody class="mcnImageBlockOuter"><tr><td valign="top" style="padding:9px" class="mcnImageBlockInner">'+
