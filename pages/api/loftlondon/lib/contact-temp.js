@@ -55,8 +55,8 @@ const contactTmep = async (data)=>{
 	 
 		'h4{color:#949494; font-family:Georgia; font-size:20px; font-style:italic; font-weight:normal; line-height:125%;letter-spacing:normal;text-align:left;}'+
                 '#templateHeader{ background-color:#182126; background-image:none; background-repeat:no-repeat; background-position:center;background-size:cover; border-top:0; border-bottom:0; padding-top:9px; padding-bottom:0;}'+
-                '#templateHeader .mcnTextContent,#templateHeader .mcnTextContent p{color:#202020; font-family:Helvetica; font-size:16px; line-height:150%; text-align:left; }'+
-                '#templateHeader .mcnTextContent a,#templateHeader .mcnTextContent p a{color:#007C89; font-weight:normal; text-decoration:underline; }'+
+                // '#templateHeader .mcnTextContent,#templateHeader .mcnTextContent p{color:#202020; font-family:Helvetica; font-size:16px; line-height:150%; text-align:left; }'+
+                // '#templateHeader .mcnTextContent a,#templateHeader .mcnTextContent p a{color:#007C89; font-weight:normal; text-decoration:underline; }'+
 		'.headerContainer{ background-color:#transparent; background-image:none; background-repeat:no-repeat; background-position:center;background-size:cover;border-top:0;border-bottom:0;padding-top:0;padding-bottom:0;}'+
 	 
 		'.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{color:#757575;font-family:Helvetica;font-size:16px;line-height:150%;text-align:left;}'+
@@ -81,6 +81,7 @@ const contactTmep = async (data)=>{
 	'@media only screen and (min-width:768px){'+
 		'.templateContainer{'+
 			'width:600px !important;'+
+                        'border:3px inset #182126;'+
 		'}'+
 
     '}'+	
@@ -172,11 +173,11 @@ const contactTmep = async (data)=>{
         '<!--*|IF:MC_PREVIEW_TEXT|*-->'+
         '<!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">*|MC_PREVIEW_TEXT|*</span><!--<![endif]-->'+
         '<!--*|END:IF|*-->'+
-        '<center><table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">'+
+        '<center><table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" >'+
             '<tr> <td align="center" valign="top" id="bodyCell">'+
                     '<!-- BEGIN TEMPLATE // -->'+
                     '<table border="0" cellpadding="0" cellspacing="0" width="100%">'+
-                        '<tr><td align="center" valign="top" id="templateHeader" data-template-container>'+
+                        '<tr><td align="center" valign="top"  data-template-container>'+
                             '<!--[if (gte mso 9)|(IE)]>'+
                             '<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">'+
                             '<tr><td align="center" valign="top" width="600" style="width:600px;">'+
