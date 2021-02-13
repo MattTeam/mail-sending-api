@@ -63,10 +63,10 @@ handler.post(async (req, res) => {
       //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk 
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
-        from: "info@thelasik.co.uk",
-        to: 'info@thelasik.co.uk, matt@dubseo.co.uk',
+        from: "info@loft.london",
+        to: 'swetanshu84@gmail.com, rickydubey1986@gmail.com, bablu.developer16@gmail.com',
         subject:
-          "thelasik.co.uk | New Contact Request from " + data.name,
+          "loft.london | New Contact Request from " + data.name,
         html: mailContent,
       };
       const result = await transporter.sendMail(mailOptions);
