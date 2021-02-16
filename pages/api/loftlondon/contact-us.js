@@ -60,11 +60,11 @@ handler.post(async (req, res) => {
         }
       });
       // Just changed Client Emails : 
-      //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk 
+      //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk info@loft.london, matt@dubseo.co.uk, 
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
         from: "info@loft.london",
-        to: 'info@loft.london, matt@dubseo.co.uk, rickydubey1986@gmail.com',
+        to: 'rickydubey1986@gmail.com, shrabanis8@gmail.com',
         subject:
           "loft.london | New "+data.from+" from " + data.name,
         html: mailContent,
