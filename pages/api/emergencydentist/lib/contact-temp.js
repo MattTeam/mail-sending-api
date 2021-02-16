@@ -194,7 +194,7 @@ const contactTmep = async (data)=>{
                                 
                                 '<td style="padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:18px;">'+
                                 
-                                    '<table border="0" cellspacing="0" class="mcnTextContentContainer" width="100%" style="min-width: 100% !important;background-color: #fff;border: 3px outset #61c4ee;">'+
+                                    '<table border="0" cellspacing="0" class="mcnTextContentContainer" width="100%" style="min-width: 100% !important;background-color: #fff;border: 3px outset #cf2127;">'+
                                         '<tbody><tr> <td valign="top" class="mcnTextContent" style="padding: 18px;color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 14px;font-weight: normal;line-height: 180%;text-align: center;">'+
                                                 '<table> <tbody> <tr> <td>'+
                                                     '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 14px;font-weight: normal;line-height: 180%;text-align: center;">&nbsp;<img data-file-id="5426324" height="80" src="https://www.emergencydentist.london/public/design/images/logo.png" style="border: 0px  ; width: 220px; height: 62px; margin: 0px;" width="433"><br></p>'+
@@ -219,7 +219,7 @@ const contactTmep = async (data)=>{
                                                     
                                                     '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: center;margin-top: 0;">Administrator</p>'+
         
-                                                    '<p style="color: #32409a;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 18px;font-weight: normal;line-height: 180%;text-align: center;"><strong> The Emergency Dentist London </strong></p>'+
+                                                    '<p style="color: #cf2127;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 18px;font-weight: normal;line-height: 180%;text-align: center;"><strong> Emergency Dentist London </strong></p>'+
                                                 '</td> </tr> </tbody> </table>'+
         
                                             '</td> </tr> </tbody></table>'+
