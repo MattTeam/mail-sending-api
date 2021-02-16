@@ -48,11 +48,11 @@ handler.post(async (req, res) => {
         }
       });
       // Just changed Client Emails : 
-      //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk ,info@emergencydentist.london
+      //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk ,info@emergencydentist.london swetanshu84@gmail.com,rickydubey1986@gmail.com, bablu.developer16@gmail.com, shrabanis8@gmail.com
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
         from: "info@emergencydentist.london",
-        to: 'swetanshu84@gmail.com,rickydubey1986@gmail.com, bablu.developer16@gmail.com, shrabanis8@gmail.com',
+        to: 'matt@dubseo.co.uk ,info@emergencydentist.london , rickydubey1986@gmail.com',
         subject:
           "emergencydentist.london | New "+data.from+" from " + data.name,
         html: mailContent,
