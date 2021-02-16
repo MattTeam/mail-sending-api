@@ -208,7 +208,7 @@ const callbackTmep = async (data)=>{
 
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 14px;font-weight: normal;line-height: 180%;text-align: left;"><span style="font-size:18px">Dear Admin,</span></p>'+
 
-                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 14px;font-weight: normal;line-height: 180%;text-align: left;"><span style="font-size:18px;line-height: 20px"><span style="color:#32409a"><strong>A Consultation Booking request has been received with following details on '+currDate+' </strong></span>&nbsp;</span><br>&nbsp;</p>'+
+                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 14px;font-weight: normal;line-height: 180%;text-align: left;"><span style="font-size:18px;line-height: 20px"><span style="color:#32409a"><strong> Consultation Booking request has been received with following details on '+currDate+' </strong></span>&nbsp;</span><br>&nbsp;</p>'+
 
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Name :</strong> '+data.name+'</p>'+
 
