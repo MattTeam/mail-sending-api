@@ -9,15 +9,12 @@ const callbackTmep = async (data)=>{
     var today  = new Date();
     var currDate  = today.toLocaleDateString("en-US", options) ;
     var receiveBy = "";
-    if(data.receivebycall ==="Yes"){
-        receiveBy = receiveBy+'Call' ;
+    if(data.facetoface ==="Yes"){
+        receiveBy = receiveBy+'Face to Face' ;
     }
-    if(data.receivebytext ==="Yes"){
-        receiveBy = receiveBy+' , Text' ;
-    }
-    if(data.receivebyemail ==="Yes"){
-        receiveBy = receiveBy+' , Email' ;
-    }
+    if(data.telephone ==="Yes"){
+        receiveBy = receiveBy+' , Telephone' ;
+    } 
 
     var mailContent =
     '<!doctype html>' +
@@ -211,7 +208,7 @@ const callbackTmep = async (data)=>{
 
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 14px;font-weight: normal;line-height: 180%;text-align: left;"><span style="font-size:18px">Dear Admin,</span></p>'+
 
-                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 14px;font-weight: normal;line-height: 180%;text-align: left;"><span style="font-size:18px;line-height: 20px"><span style="color:#32409a"><strong>A callback request has been received with following details on '+currDate+' </strong></span>&nbsp;</span><br>&nbsp;</p>'+
+                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 14px;font-weight: normal;line-height: 180%;text-align: left;"><span style="font-size:18px;line-height: 20px"><span style="color:#32409a"><strong>A Consultation Booking request has been received with following details on '+currDate+' </strong></span>&nbsp;</span><br>&nbsp;</p>'+
 
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Name :</strong> '+data.name+'</p>'+
 
@@ -220,7 +217,7 @@ const callbackTmep = async (data)=>{
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Phone:</strong> '+ data.phone +' </p>'+
 
                                             
-                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;">I would like to receive information, offers and promotions about TheLasik\'s products and services via: :<strong> '+receiveBy+' </strong>, </p>'+
+                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"> <strong>Preferred Consultation :</strong> '+receiveBy+'  </p>'+
 
                                         //     '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Receive by text:</strong> '+ data.receivebytext +' </p>'+
 
