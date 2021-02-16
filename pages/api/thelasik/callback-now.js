@@ -7,16 +7,7 @@ import validateMiddleware from '../../../utils/validate-middleware';
 import { check, validationResult } from 'express-validator'
 import contactTmep from './lib/callback-temp';
 const nodemailer = require("nodemailer");
-// require('dotenv').config();
-// check('message').isIn(['@','#','%','&','*','^']).withMessage('Invalid character in messages !')
-// const validateBody = initMiddleware(
-//   validateMiddleware([
-//       check('name').isString().withMessage('Name should be only string !').isLength({min:4, max: 40}).withMessage('Name length should 4 to 40 charecters !'),
-//       check('email').exists().withMessage("Email is required").isEmail().withMessage("Invalid email address !"), 
-//       check('phone').matches(/^(\+\d{1,3}[- ]?)?\d{10}$/, 'g').withMessage("Phone number is invalid !"),
-//       check('message').exists().withMessage('Message is required !')
-//   ], validationResult)
-// )
+ 
 
 const validateBody = initMiddleware(
   validateMiddleware([
