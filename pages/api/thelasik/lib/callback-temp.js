@@ -8,6 +8,16 @@ const callbackTmep = async (data)=>{
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     var today  = new Date();
     var currDate  = today.toLocaleDateString("en-US", options) ;
+    var receiveBy = "";
+    if(data.receivebycall =="Yes"){
+        receiveBy = receiveBy+'Call' ;
+    }
+    if(data.receivebytext =="Yes"){
+        receiveBy = receiveBy+' , Text' ;
+    }
+    if(data.receivebyemail =="Yes"){
+        receiveBy = receiveBy+' , Email' ;
+    }
 
     var mailContent =
     '<!doctype html>' +
@@ -208,12 +218,13 @@ const callbackTmep = async (data)=>{
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Email:</strong> '+ data.email +' </p>'+
 
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Phone:</strong> '+ data.phone +' </p>'+
+
                                             
-                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Receive by email :</strong> '+data.receivebyemail+'</p>'+
+                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>I would like to receive information, offers and promotions about " The Lasik " products and services via: :</strong> '+receiveBy+' , </p>'+
 
-                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Receive by text:</strong> '+ data.receivebytext +' </p>'+
+                                        //     '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Receive by text:</strong> '+ data.receivebytext +' </p>'+
 
-                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Receive by call:</strong> '+ data.receivebycall +' </p>'+
+                                        //     '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Receive by call:</strong> '+ data.receivebycall +' </p>'+
 
 
                                         //     '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Subject:</strong> New contact request received!</p>'+
