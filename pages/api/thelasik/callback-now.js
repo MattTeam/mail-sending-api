@@ -11,19 +11,18 @@ const nodemailer = require("nodemailer");
 
 const validateBody = initMiddleware(
   validateMiddleware([
-      check('callbnackname').isString().withMessage('Name should be only string !').isLength({min:2, max: 40}).withMessage('Name length should 4 to 40 charecters !'),
-      check('callbnackemail').exists().withMessage("Email is required").isEmail().withMessage("Invalid email address !"), 
-      check('callbnackphone').isLength({min:9, max: 12}).withMessage("Phone number is invalid !")
+      check('name').isString().withMessage('Name should be only string !').isLength({min:2, max: 40}).withMessage('Name length should 4 to 40 charecters !'),
+      check('email').exists().withMessage("Email is required").isEmail().withMessage("Invalid email address !"), 
+      check('phone').isLength({min:9, max: 12}).withMessage("Phone number is invalid !")
   ], validationResult)
 )
 
 
 // check('message').matches(/^([0-9A-z\ \_]+)$/, 'g').withMessage('Message should not use uniq characters !')
 handler.post(async (req, res) => { 
+  console.log("the params : ", req.body);
     try {
       const data = req.body; // get the json object sent by the client
-
-      console.log("the reqdata : ",data);
       await validateBody(req, res);
       const errors = validationResult(req) ;
       if (!errors.isEmpty()) {
@@ -58,7 +57,7 @@ handler.post(async (req, res) => {
         from: "info@thelasik.co.uk",
         to: 'swetanshu84@gmail.com,rickydubey1986@gmail.com, bablu.developer16@gmail.com, shrabanis8@gmail.com',
         subject:
-          "thelasik.co.uk | New Callback Request from " + data.callbnackname,
+          "thelasik.co.uk | New Callback Request from " + data.name,
         html: mailContent,
       };
       const result = await transporter.sendMail(mailOptions);
