@@ -9,13 +9,13 @@ const callbackTmep = async (data)=>{
     var today  = new Date();
     var currDate  = today.toLocaleDateString("en-US", options) ;
     var receiveBy = "";
-    if(data.receivebycall ==="Yes"){
+    if(data.callbnackcall ==="Yes"){
         receiveBy = receiveBy+'Call' ;
     }
-    if(data.receivebytext ==="Yes"){
+    if(data.callbnacktext ==="Yes"){
         receiveBy = receiveBy+' , Text' ;
     }
-    if(data.receivebyemail ==="Yes"){
+    if(data.callbnackemail ==="Yes"){
         receiveBy = receiveBy+' , Email' ;
     }
 
@@ -213,11 +213,11 @@ const callbackTmep = async (data)=>{
 
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 14px;font-weight: normal;line-height: 180%;text-align: left;"><span style="font-size:18px;line-height: 20px"><span style="color:#32409a"><strong> Callback request has been received with following details on '+currDate+' </strong></span>&nbsp;</span><br>&nbsp;</p>'+
 
-                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Name :</strong> '+data.name+'</p>'+
+                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Name :</strong> '+data.callbnackname+'</p>'+
 
-                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Email:</strong> '+ data.email +' </p>'+
+                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Email:</strong> '+ data.callbnackemail +' </p>'+
 
-                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Phone:</strong> '+ data.phone +' </p>'+
+                                            '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Phone:</strong> '+ data.callbnackphone +' </p>'+
 
                                             
                                             '<p style="color: #534A4A;font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size: 16px;font-weight: normal;line-height: 180%;text-align: left;"><strong>Preferred Communication Via: </strong> '+receiveBy+' </p>'+
