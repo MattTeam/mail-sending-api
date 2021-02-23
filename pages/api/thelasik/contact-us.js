@@ -48,18 +48,18 @@ handler.post(async (req, res) => {
       const transporter = nodemailer.createTransport({
           // host: "smtp.example.com",
           pool:true,
-          host : process.env.SMTP_HOST,
-          port: process.env.SMTP_PORT,
+          host : process.env.SMTP_HOST_LASIK,
+          port: 465,
           secure: false, // upgrade later with STARTTLS
           auth: {
-            user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS
+            user: process.env.SMTP_USER_LASIK,
+            pass: process.env.SMTP_PASS_LASIK
           },
           tls: {
             rejectUnauthorized: false
         }
       });
-      console.log("SMTP HOST : ",process.env.SMTP_HOST);
+      console.log("SMTP HOST : ",process.env.SMTP_HOST_LASIK);
         console.log("SMTP USER : ",process.env.SMTP_USER_LASIK);
         console.log("SMTP PASS : ",process.env.SMTP_PASS_LASIK);
       // Just changed Client Emails : 
