@@ -59,11 +59,11 @@ handler.post(async (req, res) => {
             rejectUnauthorized: false
         }
       });
-      //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk swetanshu84@gmail.com, rickydubey1986@gmail.com, bablu.developer16@gmail.com
+      //data.to info@londongpclinic.co.uk,matt@dubseo.co.uk ', rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk swetanshu84@gmail.com, rickydubey1986@gmail.com, bablu.developer16@gmail.com
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
         from: "info@londongpclinic.co.uk",
-        to: 'info@londongpclinic.co.uk,matt@dubseo.co.uk ',
+        to: 'rickydubey1986@gmail.com, bablu.developer16@gmail.com, swetanshu84@gmail.com',
         subject:
           "londongpclinic.co.uk | New Contact Request from " + data.name,
         html: mailContent,
