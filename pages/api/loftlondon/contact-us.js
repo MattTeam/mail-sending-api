@@ -48,12 +48,12 @@ handler.post(async (req, res) => {
       const transporter = nodemailer.createTransport({
           // host: "smtp.example.com",
           pool:true,
-          host : process.env.SMTP_HOST,
+          host : process.env.SMTP_HOST_LOFT,
           port: process.env.SMTP_PORT,
           secure: false, // upgrade later with STARTTLS
           auth: {
-            user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS
+            user: process.env.SMTP_USER_LOFT,
+            pass: process.env.SMTP_PASS_LOFT
           },
           tls: {
             rejectUnauthorized: false
@@ -69,10 +69,16 @@ handler.post(async (req, res) => {
           "loft.london | New "+data.from+" from " + data.name,
         html: mailContent,
       };
+      console.log("SMTP HOST : ",process.env.SMTP_HOST_LOFT);
+      console.log("SMTP USER : ",process.env.SMTP_USER_LOFT);
+      console.log("SMTP PASS : ",process.env.SMTP_PASS_LOFT);
       const result = await transporter.sendMail(mailOptions);
         res.status(200).send({ status: "OK", result: result });
     } catch (err) {
       console.log("mail sending failed : ", err.message);
+      console.log("SMTP HOST : ",process.env.SMTP_HOST_EMER);
+      console.log("SMTP USER : ",process.env.SMTP_USER_EMER);
+      console.log("SMTP PASS : ",process.env.SMTP_PASS_EMER);
         res.status(500).json({ status: "FAILED", error: err.message });
     } 
 

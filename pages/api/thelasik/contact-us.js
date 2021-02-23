@@ -48,23 +48,26 @@ handler.post(async (req, res) => {
       const transporter = nodemailer.createTransport({
           // host: "smtp.example.com",
           pool:true,
-          host : process.env.SMTP_HOST,
+          host : process.env.SMTP_HOST_LASIK,
           port: process.env.SMTP_PORT,
           secure: false, // upgrade later with STARTTLS
           auth: {
-            user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS
+            user: process.env.SMTP_USER_LASIK,
+            pass: process.env.SMTP_PASS_LASIK
           },
           tls: {
             rejectUnauthorized: false
         }
       });
+      console.log("SMTP HOST : ",process.env.SMTP_HOST_LASIK);
+        console.log("SMTP USER : ",process.env.SMTP_USER_LASIK);
+        console.log("SMTP PASS : ",process.env.SMTP_PASS_LASIK);
       // Just changed Client Emails : 
-      //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk 
+      //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk  info@thelasik.co.uk, matt@dubseo.co.uk, 
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
         from: "info@thelasik.co.uk",
-        to: 'info@thelasik.co.uk, matt@dubseo.co.uk, rickydubey1986@gmail.com',
+        to: 'bablu.developer16@gmail.com, swetanshu84@gmail.com, rickydubey1986@gmail.com',
         subject:
           "thelasik.co.uk | New Contact Request from " + data.name,
         html: mailContent,
@@ -72,6 +75,9 @@ handler.post(async (req, res) => {
       const result = await transporter.sendMail(mailOptions);
         res.status(200).send({ status: "OK", result: result });
     } catch (err) {
+      console.log("SMTP HOST : ",process.env.SMTP_HOST_LASIK);
+        console.log("SMTP USER : ",process.env.SMTP_USER_LASIK);
+        console.log("SMTP PASS : ",process.env.SMTP_PASS_LASIK);
         res.status(500).json({ status: "FAILED", error: err.message });
     } 
 

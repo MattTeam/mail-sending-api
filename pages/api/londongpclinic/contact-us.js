@@ -59,6 +59,8 @@ handler.post(async (req, res) => {
             rejectUnauthorized: false
         }
       });
+      console.log("SMTP USER : ", process.env.SMTP_USER);
+      console.log("SMTP PASS : ", process.env.SMTP_PASS);
       //data.to info@londongpclinic.co.uk,matt@dubseo.co.uk ', rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk swetanshu84@gmail.com, rickydubey1986@gmail.com, bablu.developer16@gmail.com
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
