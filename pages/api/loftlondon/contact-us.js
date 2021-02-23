@@ -72,9 +72,10 @@ handler.post(async (req, res) => {
       const result = await transporter.sendMail(mailOptions);
         res.status(200).send({ status: "OK", result: result });
     } catch (err) {
+      console.log("mail sending failed : ", err.message);
         res.status(500).json({ status: "FAILED", error: err.message });
     } 
 
 });
 
-module.exports = middleware(allowCors(handler));
+module.exports = handler // middleware(allowCors(handler));
