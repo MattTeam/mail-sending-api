@@ -22,7 +22,7 @@ const validateBody = initMiddleware(
   validateMiddleware([
       check('name').isString().withMessage('Name should be only string !').isLength({min:2, max: 40}).withMessage('Name length should 4 to 40 charecters !'),
       check('email').exists().withMessage("Email is required").isEmail().withMessage("Invalid email address !"), 
-      check('phone').isLength({min:9, max: 12}).withMessage("Phone number is invalid !"),
+      check('phone').isLength({min:9, max: 14}).withMessage("Phone number is invalid !"),
       check('message').exists().withMessage('Message is required !')
   ], validationResult)
 )
@@ -60,11 +60,11 @@ handler.post(async (req, res) => {
         }
       });
       // Just changed Client Emails : 
-      //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk info@loft.london, matt@dubseo.co.uk, 
+      //data.to info@loft.london, matt@dubseo.co.uk, rickydubey1986@gmail.com', rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk info@loft.london, matt@dubseo.co.uk, 
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
         from: "info@loft.london",
-        to: 'info@loft.london, matt@dubseo.co.uk, rickydubey1986@gmail.com',
+        to: 'rickydubey1986@gmail.com, bablu.developer16@gmail.com , swetanshu84@gmail.com',
         subject:
           "loft.london | New "+data.from+" from " + data.name,
         html: mailContent,

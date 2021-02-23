@@ -12,7 +12,7 @@ const validateBody = initMiddleware(
   validateMiddleware([
       check('name').isString().withMessage('Name should be only string !').isLength({min:2, max: 40}).withMessage('Name length should 4 to 40 charecters !'),
       check('email').exists().withMessage("Email is required").isEmail().withMessage("Invalid email address !"), 
-      check('phone').isLength({min:9, max: 12}).withMessage("Phone number is invalid !"),
+      check('phone').isLength({min:9, max: 14}).withMessage("Phone number is invalid !"),
       check('message').exists().withMessage('Message is required !')
   ], validationResult)
 )
