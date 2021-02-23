@@ -52,8 +52,8 @@ handler.post(async (req, res) => {
           port: process.env.SMTP_PORT,
           secure: false, // upgrade later with STARTTLS
           auth: {
-            user: process.env.SMTP_USER_LASIK,
-            pass: process.env.SMTP_PASS_LASIK
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS
           },
           tls: {
             rejectUnauthorized: false
