@@ -48,7 +48,7 @@ handler.post(async (req, res) => {
       const transporter = nodemailer.createTransport({
           // host: "smtp.example.com",
           pool:true,
-          host : process.env.SMTP_HOST_LASIK,
+          host : process.env.SMTP_HOST,
           port: process.env.SMTP_PORT,
           secure: false, // upgrade later with STARTTLS
           auth: {
