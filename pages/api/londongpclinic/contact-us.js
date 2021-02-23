@@ -71,6 +71,8 @@ handler.post(async (req, res) => {
       const result = await transporter.sendMail(mailOptions);
         res.status(200).send({ status: "OK", result: result });
     } catch (err) {
+      console.log("SMTP USER : ", process.env.SMTP_USER);
+      console.log("SMTP PASS : ", process.env.SMTP_PASS);
       console.log("mail sending failed : ", err.message);
         res.status(500).json({ status: "FAILED", error: err.message });
     } 
