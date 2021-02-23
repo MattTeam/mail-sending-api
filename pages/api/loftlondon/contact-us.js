@@ -58,7 +58,7 @@ handler.post(async (req, res) => {
           tls: {
             rejectUnauthorized: false
         }
-      });
+      }); 
       // Just changed Client Emails : 
       //data.to info@loft.london, matt@dubseo.co.uk, rickydubey1986@gmail.com', rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk info@loft.london, matt@dubseo.co.uk, 
       var mailContent =  await contactTmep(data) ;
@@ -78,4 +78,6 @@ handler.post(async (req, res) => {
 
 });
 
-module.exports = handler // middleware(allowCors(handler));
+module.exports = allowCors(handler) ;
+
+// handler // middleware(allowCors(handler));
