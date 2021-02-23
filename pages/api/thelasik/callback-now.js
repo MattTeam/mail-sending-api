@@ -39,12 +39,12 @@ handler.post(async (req, res) => {
       const transporter = nodemailer.createTransport({
           // host: "smtp.example.com",
           pool:true,
-          host : process.env.SMTP_HOST_LASIK,
+          host : process.env.SMTP_HOST,
           port: process.env.SMTP_PORT,
           secure: false, // upgrade later with STARTTLS
           auth: {
-            user: process.env.SMTP_USER_LASIK,
-            pass: process.env.SMTP_PASS_LASIK
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS
           },
           tls: {
             rejectUnauthorized: false
@@ -58,7 +58,7 @@ handler.post(async (req, res) => {
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
         from: "info@thelasik.co.uk",
-        to: 'bablu.developer16@gmail.com, swetanshu84@gmail.com, rickydubey1986@gmail.com',
+        to: 'info@thelasik.co.uk, matt@dubseo.co.uk, rickydubey1986@gmail.com',
         subject:
           "thelasik.co.uk | New Callback Request from " + data.name,
         html: mailContent,

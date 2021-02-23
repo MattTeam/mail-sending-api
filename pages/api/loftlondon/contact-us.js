@@ -48,12 +48,12 @@ handler.post(async (req, res) => {
       const transporter = nodemailer.createTransport({
           // host: "smtp.example.com",
           pool:true,
-          host : process.env.SMTP_HOST_LOFT,
+          host : process.env.SMTP_HOST,
           port: process.env.SMTP_PORT,
           secure: false, // upgrade later with STARTTLS
           auth: {
-            user: process.env.SMTP_USER_LOFT,
-            pass: process.env.SMTP_PASS_LOFT
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS
           },
           tls: {
             rejectUnauthorized: false
@@ -64,7 +64,7 @@ handler.post(async (req, res) => {
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
         from: "info@loft.london",
-        to: 'rickydubey1986@gmail.com, bablu.developer16@gmail.com , swetanshu84@gmail.com',
+        to: 'matt@dubseo.co.uk, info@loft.london, rickydubey1986@gmail.com',
         subject:
           "loft.london | New "+data.from+" from " + data.name,
         html: mailContent,
