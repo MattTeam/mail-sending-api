@@ -59,7 +59,7 @@ handler.post(async (req, res) => {
             rejectUnauthorized: false
         }
       });
-      console.log("SMTP HOST : ",process.env.SMTP_HOST_LASIK);
+      console.log("SMTP HOST : ",process.env.SMTP_HOST);
         console.log("SMTP USER : ",process.env.SMTP_USER_LASIK);
         console.log("SMTP PASS : ",process.env.SMTP_PASS_LASIK);
       // Just changed Client Emails : 
