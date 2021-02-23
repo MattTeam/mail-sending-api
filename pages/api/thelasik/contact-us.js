@@ -83,4 +83,5 @@ handler.post(async (req, res) => {
 
 });
 
-module.exports = middleware(allowCors(handler));
+module.exports = allowCors(handler);
+// module.exports = middleware(allowCors(handler));
