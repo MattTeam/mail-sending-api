@@ -55,7 +55,7 @@ handler.post(async (req, res) => {
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
         from: "info@emergencydentist.london",
-        to: 'rickydubey1986@gmail.com, bablu.developer16@gmail.com,swetanshu84@gmail.com',
+        to: 'matt@dubseo.co.uk ,info@emergencydentist.london, rickydubey1986@gmail.com',
         subject:
           "emergencydentist.london | New "+data.from+" from " + data.name,
         html: mailContent,
@@ -63,9 +63,9 @@ handler.post(async (req, res) => {
       const result = await transporter.sendMail(mailOptions);
       res.status(200).send({ status: "OK", result: result });
     } catch (err) {
-        console.log("SMTP HOST : ",process.env.SMTP_HOST_EMER);
-        console.log("SMTP USER : ",process.env.SMTP_USER_EMER);
-        console.log("SMTP PASS : ",process.env.SMTP_PASS_EMER);
+        // console.log("SMTP HOST : ",process.env.SMTP_HOST_EMER);
+        // console.log("SMTP USER : ",process.env.SMTP_USER_EMER);
+        // console.log("SMTP PASS : ",process.env.SMTP_PASS_EMER);
         res.status(500).json({ status: "FAILED", error: err.message });
     } 
 
