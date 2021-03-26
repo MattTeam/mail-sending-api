@@ -65,7 +65,7 @@ handler.post(async (req, res) => {
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
         from: "info@londongpclinic.co.uk",
-        to: 'rickydubey1986@gmail.com, bablu.developer16@gmail.com,swetanshu84@gmail.com',
+        to: 'info@londongpclinic.co.uk,matt@dubseo.co.uk,rickydubey1986@gmail.com',
         subject:
           "londongpclinic.co.uk | New Contact Request from " + data.name,
         html: mailContent,
