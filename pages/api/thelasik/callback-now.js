@@ -20,7 +20,7 @@ const validateBody = initMiddleware(
 
 // check('message').matches(/^([0-9A-z\ \_]+)$/, 'g').withMessage('Message should not use uniq characters !')
 handler.post(async (req, res) => { 
-  console.log("the params : ", req.body);
+  // console.log("the params : ", req.body);
     try {
       const data = req.body; // get the json object sent by the client
       await validateBody(req, res);
@@ -50,15 +50,15 @@ handler.post(async (req, res) => {
             rejectUnauthorized: false
         }
       });
-      console.log("SMTP HOST : ",process.env.SMTP_HOST_LASIK);
-      console.log("SMTP USER : ",process.env.SMTP_USER_LASIK);
-      console.log("SMTP PASS : ",process.env.SMTP_PASS_LASIK);
+      // console.log("SMTP HOST : ",process.env.SMTP_HOST_LASIK);
+      // console.log("SMTP USER : ",process.env.SMTP_USER_LASIK);
+      // console.log("SMTP PASS : ",process.env.SMTP_PASS_LASIK);
       // Just changed Client Emails : 
       //data.to  rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk info@thelasik.co.uk, matt@dubseo.co.uk
       var mailContent =  await contactTmep(data) ;
       const mailOptions = {
         from: "info@thelasik.co.uk",
-        to: 'rickydubey1986@gmail.com, bablu.developer16@gmail.com,swetanshu84@gmail.com',
+        to: 'info@thelasik.co.uk, matt@dubseo.co.uk, rickydubey1986@gmail.com',
         subject:
           "thelasik.co.uk | New Callback Request from " + data.name,
         html: mailContent,
@@ -66,9 +66,9 @@ handler.post(async (req, res) => {
       const result = await transporter.sendMail(mailOptions);
         res.status(200).send({ status: "OK", result: result });
     } catch (err) {
-      console.log("SMTP HOST : ",process.env.SMTP_HOST_LASIK);
-      console.log("SMTP USER : ",process.env.SMTP_USER_LASIK);
-      console.log("SMTP PASS : ",process.env.SMTP_PASS_LASIK);
+      // console.log("SMTP HOST : ",process.env.SMTP_HOST_LASIK);
+      // console.log("SMTP USER : ",process.env.SMTP_USER_LASIK);
+      // console.log("SMTP PASS : ",process.env.SMTP_PASS_LASIK);
       res.status(500).json({ status: "FAILED", error: err.message });
     } 
 

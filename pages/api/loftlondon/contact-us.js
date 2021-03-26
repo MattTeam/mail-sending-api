@@ -35,19 +35,34 @@ handler.post(async (req, res) => {
       //     pass: process.env.PASSWORD, // naturally, replace both with your real credentials or an application-specific password
       //   },
       // });
-      const transporter = nodemailer.createTransport({ 
+      // const transporter = nodemailer.createTransport({ 
+      //     pool:true,
+      //     host : process.env.SMTP_HOST_LOFT,
+      //     port: process.env.SMTP_PORT,
+      //     secure: false, // upgrade later with STARTTLS
+      //     auth: {
+      //       user: process.env.SMTP_USER_LOFT,
+      //       pass: process.env.SMTP_PASS_LOFT
+      //     },
+      //     tls: {
+      //       rejectUnauthorized: false
+      //   }
+      // });  
+
+      const transporter = nodemailer.createTransport({
+        // host: "smtp.example.com",
           pool:true,
-          host : process.env.SMTP_HOST_LOFT,
+          host : process.env.SMTP_HOST,
           port: process.env.SMTP_PORT,
           secure: false, // upgrade later with STARTTLS
           auth: {
-            user: process.env.SMTP_USER_LOFT,
-            pass: process.env.SMTP_PASS_LOFT
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS
           },
           tls: {
             rejectUnauthorized: false
         }
-      }); 
+      });
       // Just changed Client Emails : 
       //data.to info@loft.london, matt@dubseo.co.uk, rickydubey1986@gmail.com', rickydubey1986@gmail.com, bablu.developer16@gmail.com, matt@dubseo.co.uk info@loft.london, matt@dubseo.co.uk, 
       var mailContent =  await contactTmep(data) ;
@@ -59,8 +74,11 @@ handler.post(async (req, res) => {
         html: mailContent,
       }; 
       const result = await transporter.sendMail(mailOptions);
+      console.log("Email sent :",result);
         res.status(200).send({ status: "OK", result: result });
     } catch (err) { 
+      console.log("Email sent error:",err);
+
         res.status(500).json({ status: "FAILED", error: err.message });
     } 
 
